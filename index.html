@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title> <!--TITOLOOOOOOOOO---></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Vue To-Do List</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
+  <div id="app">
+    <form @submit.prevent="addTodo()">
+      <input type="text" v-model="newTodo" required>
+      <button>Add</button>
+    </form>
+    <ul>
+      <li v-for="(singletodo, index) in todos"
+        :class="{'sbarrato': singletodo.done}"
+        @click="changeDone(index)"
+      >
+        <p>{{ singletodo.text }}</p>
+        <span @click="remove(index)">X</span>
+      </li>
+    </ul>
+  </div>
 
-
-  
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
