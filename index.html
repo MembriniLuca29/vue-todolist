@@ -16,10 +16,11 @@
     </form>
     <ul>
       <li v-for="(singletodo, index) in todos"
-        :class="{'sbarrato': singletodo.done}"
-        @click="changeDone(index)"
+        
       >
-        <p>{{ singletodo.text }}</p>
+        <p
+        :class="{'sbarrato': singletodo.done}"
+        @click="changeDone(index)">{{ singletodo.text }}</p>
         <span @click="remove(index)">X</span>
       </li>
     </ul>

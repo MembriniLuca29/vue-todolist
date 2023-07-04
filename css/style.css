@@ -22,11 +22,12 @@ li{
     
     display: flex;
     padding-top: 20px;
+    font-size: 3rem;
 }
 
 p{
     cursor: pointer;
-    width: 200px;
+    width: 600px;
 }
 
 span{
@@ -35,4 +36,18 @@ border: 1px solid black;
 border-radius: 10px;
 background-color: lightcoral;
 padding: 5px;
-font-size: 0.7rem;}
+font-size: 2rem;}
+
+div{
+    width: 40%;
+    margin: 100px auto;
+}
+
+input{
+    width: 50%;
+    font-size: 3rem;
+}
+
+button{
+    font-size: 3rem;
+}
