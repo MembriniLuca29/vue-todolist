@@ -10,10 +10,11 @@
 </head>
 <body>
   <div id="app">
-    <form @submit.prevent="addTodo()">
-      <input type="text" v-model="newTodo" required>
-      <button>Add</button>
-    </form>
+    
+      <input type="text" v-model="newTodo" required
+      @keydown.enter="addTodo">
+      <button @click="addTodo">Add</button>
+   
     <ul>
       <li v-for="(singletodo, index) in todos"
         
